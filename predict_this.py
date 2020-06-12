@@ -7,6 +7,10 @@ import matplotlib.pyplot as plt
 from pandas_datareader import data
 #pip install pandas-datareader
 
+#import tensorflow as tensorflo
+import tensorflow.compat.v1 as tf
+print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
+
 stock = 'ITUB4.SA'
 source = 'yahoo'
 
@@ -28,8 +32,6 @@ stock_data['Adj Close'][-1]
 
 
 # %%
-import tensorflow as tensorflo
-import tensorflow.compat.v1 as tf
 import pandas as pd  
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
